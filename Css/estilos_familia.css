@@ -1,59 +1,60 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     font-family:Arial, Helvetica, sans-serif;
+    list-style: none;
+	text-decoration: none;
 }
-h1{
-    text-align: center;
-    font-size: 50px;
-}
-p{
-    max-width: 500px;
-    padding: 20px;
-    margin: 0 auto;
-}
-u{
-    font-size: 1.5rem;
-  }
-  
-  li {
-    line-height: 1.5;
-  }
-  ul {
-    padding-left: 2rem;
-    list-style-type: none;
-  }
-  .card {
-    width: 400px;
-    height: 800px;
-    border-radius: 8px;
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    margin: 20px;
-    text-align: center;
-    transition: all 0.25s;
-  }
-  .container .card :hover{
-    transform: translateY(-15px);
-    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.1);
-  }
-  img{
-    margin: 40px 0px 0px 0px;
-    border: 7px solid white;
-    border-radius: 20px;
-    text-align: center;
-    background-size: cover;
-    
-}
+
 header{
-    background-size:cover;
+    height: 80px;
+    width: 100%;
+    background-color: rgb(32, 44, 97);
+}
+header img{
+    margin: 12px 18px 0 30px;
+    width: 60px;
+    border-radius: 50px;
+}
+.headtxt{
+    font-size: 15px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 15px;
+    color: rgb(255, 255, 255);
+    margin-left: 20px;
+}
+.desctxt{
+    display: inline-block;
+    vertical-align: middle;
+    margin: -168px;
+    margin-top: -200px;
+    margin-left: -337px;
+    color: rgb(255, 255, 255,255);
+}
+
+.navegacion ul{
+    float: right;
+    margin: -40px 250px 0 0;
+    font-size: 20px;
+}
+.navegacion li{
+    display: inline;
+    margin: 20px 0 0 30px; 
+}
+.navegacion a{
     color: white;
-    background-image: url(../Img/IPISA.jpg);
-    background-repeat: no-repeat;
-    height: 100vh;
-    background-attachment: fixed;
-    background-position: center ;
+}
+
+body h1{
+    text-align: center;
+    margin: 20px;
+}
+body p{
+    margin: 60px;
+    text-align: justify;
+    padding: 20px;
 }
 .container{
     width: 100%;
@@ -63,75 +64,38 @@ header{
     flex-wrap: wrap;
     justify-content: center;
     margin: auto;
-}
-.container .card img{
-    width: 330px;
-    height: 220px;
-}
 
 
+}
+
+.container .card{
+    width: 530px;
+    height: 600px;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 20px;
+    text-align: center;
+    transition: all 0.25s;
+}
+
+.container .card:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+.container .card h1{
+margin: 20px;
+}
 
 .container .card p{
+    margin: 10px;
+    padding: 20px;
     font-size: 16px;
     font-weight: 300;
     text-align: justify;
 }
-.nav{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 25px;
-    transition: all 0.5s ease;
-}
-.menu{
-    display: flex;
-}
-.menu li{
-    list-style: none;
-    margin: 10px;
-}
-.menu li a{
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    transition: all 0.5s ease;
-}
-.menu li a:hover{
-    padding: 5px 10px;
-    background: #fff;
-    color: #000;
-    border-radius: 15px;
-} 
-a:link, a:visited{
-    background-color: rgb(41, 41, 150);
-    color: white;
-    padding: 14px 25px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    border-radius: 5px;
-}
-.logo{
-    font-size:25px;
-    color: rgb(51, 22, 180);
-    font-weight: 100;    
-    }
-    a:hover, a:active{
-        background-color: lightblue;
-        border-radius: 5px;
-    }
-footer{
-    display: block;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 20%;
-    background-color: rgb(37, 23, 161);
-    color: white;
-    text-align: center;
-}
+
 .Imagenes{
     text-align: center;
 }

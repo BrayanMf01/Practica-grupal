@@ -3,25 +3,58 @@
     padding: 0;
     box-sizing: border-box;
     font-family:Arial, Helvetica, sans-serif;
+    list-style: none;
+	text-decoration: none;
+
 }
 header{
+    height: 80px;
+    width: 100%;
+    background-color: rgb(32, 44, 97);
     background-size:cover;
     color: white;
-    background-image: url(../Img/pexels-jeshootscom-834892.jpg);
-    background-repeat: no-repeat;
-    height: 100vh;
-    background-attachment: fixed;
-    background-position: center ;
+
 }
-.logo{
-    font-size:25px;
-    color: rgb(51, 22, 180);
-    font-weight: 100;    
-    }
-    a:hover, a:active{
-        background-color: lightblue;
-        border-radius: 5px;
-    }
+header img{
+    margin: 12px 18px 0 30px;
+    width: 60px;
+    border-radius: 50px;
+}
+.headtxt{
+    font-size: 15px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 15px;
+    color: rgb(255, 255, 255);
+    margin-left: 20px;
+}
+.desctxt{
+    display: inline-block;
+    vertical-align: middle;
+    margin: -168px;
+    margin-top: -200px;
+    margin-left: -337px;
+    color: rgb(255, 255, 255,255);
+}
+.navegacion ul{
+    float: right;
+    margin: -40px 250px 0 0;
+    font-size: 20px;
+}
+.navegacion li{
+    display: inline;
+    margin: 20px 0 0 30px; 
+}
+.navegacion a{
+    color: white;
+}
+
+.container .card:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
 #titulo{
     text-align: center;
     font-size: 40px;
@@ -35,17 +68,7 @@ p{
     padding: 20px;
     margin: auto;
 }
-u{
-    font-size: 1.5rem;
-  }
-  
-  li {
-    line-height: 1.5;
-  }
-  ul {
-    padding-left: 2rem;
-    list-style-type: none;
-  }
+
   .container .card {
     width: 330px;
     height: 400px;
@@ -67,7 +90,6 @@ u{
     background-size: cover;
     
 }
-
 .container{
     width: 100%;
     max-width: 1200px;
@@ -86,42 +108,7 @@ u{
     font-weight: 300;
     text-align: justify;
 }
-.nav{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 25px;
-    transition: all 0.5s ease;
-}
-.menu{
-    display: flex;
-}
-.menu li{
-    list-style: none;
-    margin: 10px;
-}
-.menu li a{
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    transition: all 0.5s ease;
-}
-.menu li a:hover{
-    padding: 5px 10px;
-    background: #fff;
-    color: #000;
-    border-radius: 15px;
-} 
-a:link, a:visited{
-    background-color: rgb(41, 41, 150);
-    color: white;
-    padding: 14px 25px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    border-radius: 5px;
-}
+
 
 footer{
     display: block;
@@ -129,8 +116,32 @@ footer{
     left: 0;
     bottom: 0;
     width: 100%;
-    height: 20%;
+    height: 15%;
     background-color: rgb(37, 23, 161);
     color: white;
     text-align: center;
+}
+
+
+.container{
+    width: 100%;
+    max-width: 1200px;
+    height: 430px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+}
+#doc{
+    float: center;
+}
+
+.nuevo a:link, a:visited{
+    background-color: rgb(41, 41, 150);
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
 }

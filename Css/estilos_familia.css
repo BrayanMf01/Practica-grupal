@@ -5,7 +5,6 @@
     list-style: none;
 	text-decoration: none;
 }
-
 header{
     height: 80px;
     width: 100%;
@@ -46,7 +45,6 @@ header img{
 .navegacion a{
     color: white;
 }
-
 body h1{
     text-align: center;
     margin: 20px;
@@ -67,7 +65,6 @@ body p{
 
 
 }
-
 .container .card{
     width: 530px;
     height: 600px;

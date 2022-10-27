@@ -114,7 +114,7 @@ a:link, a:visited{
 }
 .logo{
     font-size:25px;
-    color: #fff;
+    color: rgb(51, 22, 180);
     font-weight: 100;    
     }
     a:hover, a:active{

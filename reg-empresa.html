@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Empresa</title>
+</head>
+<body>
+   <h1>Formulario de Registro de Empresas</h1>
+   <form>
+    <ul>
+      <li>
+        <label>Nombre de la Empresa:</label>
+        <input name="nombre">
+      </li>
+      <li>
+        <label>RNC:</label>
+        <input name="nombre">
+      </li>
+      <li>
+        <label>¿Desea que se concozca su empresa?:</label>
+        <input type="radio" name="conoce" value="Si" CHECKED> Si
+        <input type="radio" name="conoce" value="No" CHECKED> No
+      </li>
+      <li>
+        <label>¿Dispone su empresa un departamento de Formación dentro de la empresa?:</label>
+        <input type="radio" name="formacion" value="Si" CHECKED> Si
+        <input type="radio" name="formacion" value="No" CHECKED> No
+      </li>
+      <li>
+        <label>Alcance de la empresa:</label>
+        <input type="radio" name="alcance" value="Nacional/Local" CHECKED> Nacional/Local
+        <input type="radio" name="conoce" value="Multinacional" CHECKED> Multinacional
+      </li>
+      <li>
+        <label> Actividad económica a la que se dedica la empresa</label>
+        <textarea name="dedica"></textarea>
+      </li>
+      <li>
+        <label>Industria:</label>
+        <select name="industria">
+            <option value="Agrícola" SELECTED>Agrícola
+            <option value="Comercio" SELECTED>Comercio
+            <option value="Ganadería" SELECTED>Ganadería
+            <option value="Industria de Extracción" SELECTED>Industria de Extracción
+            <option value="Industria de Manufactura" SELECTED>Industria de Manufactura
+            <option value="Otra" SELECTED>Otra
+            <option value="Servicio" SELECTED>Servicio
+
+
+
+        </select>
+      </li>
+      <li>
+        <label>Contraseña:</label>
+        <input type="password" name="clave">
+      </li>
+      <li>
+        <label> Sexo</label>
+        <input type="radio" name="sexo" value="M" CHECKED> Mujer
+        <input type="radio" name="sexo" value="H" CHECKED> Hombre
+      </li>
+      <button type="submit">Procesar</button>
+    </ul>
+    </form> 
+</body>
+</html>

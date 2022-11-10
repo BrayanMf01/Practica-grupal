@@ -18,6 +18,7 @@
           <li><a href="pasantia.html">Pasantía</a></li>
           <li><a href="colaboradores.html">Colaboradores</a></li>
           <li><a href="familia.html">Familia</a></li>
+          <li><a href="Formulario 1.php">Familia</a></li>
       </ul>
   </nav>
 </header>

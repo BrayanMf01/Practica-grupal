@@ -4,17 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Css/estilos_index.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <title>Formulario 1 </title>
 </head>
+<header>
+  <img src="https://ipisa.edu.do/wp-content/uploads/2018/08/logo-1.png" alt="logo ipisa">
+  <h1 class="headtxt">Instituto Politécnico Industrial de Santiago</h1>
+  <h3 class="desctxt">Departamento de Vinculación Laboral</h3>
+  <nav class="navegacion">
+      <ul class="menu">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="pasantia.html">Pasantía</a></li>
+          <li><a href="colaboradores.html">Colaboradores</a></li>
+          <li><a href="familia.html">Familia</a></li>
+      </ul>
+  </nav>
+</header>
 <center><h1>Formulario 1</h1></center>
 <body>
 <div class="container">
-<FORM  class="row" METHOD="POST" ACTION="Conexion1.php">
+<FORM  class="row" METHOD="POST" ACTION="Conexion F1.php">
 
 
         <label for="Año de graduacion">Año de graduacion</label>
-        <input type="date" name="fecha"  class="form-input" placeholder="Año de la graduacion"/>
+        <input type="date" name="graduacion"  class="form-input" placeholder="Año de la graduacion"/>
     
         <label for="Institución educativa a la que pertenece">Institución educativa a la que pertenece</label>
         <SELECT NAME="Institucion">
@@ -36,10 +50,10 @@
 
 
         <label for="Matricula">Matricula</label>
-        <input type ="text" name="Asunto" id="Asunto" placeholder=""/>
+        <input type ="text" name="Matricula" id="Asunto" placeholder=""/>
     
         <label for="Carrera tecnica">Carrera tecnica</label>
-        <SELECT NAME="Tecnica">
+        <SELECT NAME="CarerraTecnica">
         <OPTION VALUE="Curso" SELECTED>
         <OPTION VALUE="Artes Aplicadas">Artes Aplicadas
         <OPTION VALUE="Artes Culinarias">Artes Culinarias
@@ -52,14 +66,14 @@
         <input type ="text" name="Nombre" id="Nombre" placeholder=""/>
 
         <label for="fecha de nacimiento">fecha de nacimiento</label>
-        <input type="date" name="fechaN" id="fechaN" placeholder="fecha de nacimiento"/>
+        <input type="date" name="fechaNacimiento" id="fechaN" placeholder="fecha de nacimiento"/>
 
 
         <label for="Seccion">Seccion</label>
         <input type ="text" name="Seccion" id="Seccion" placeholder=""/>
 
         <label for="Provincia">Provincia</label>
-        <SELECT NAME="Pronvicias">
+        <SELECT NAME="Provincia">
         <OPTION VALUE="Provincia" SELECTED>
         <OPTION VALUE="Azua">Azua
         <OPTION VALUE="bahoruco">bahoruco
@@ -95,22 +109,17 @@
         </SELECT>
        
         <label for="Nombre">Telefono de Residencial</label>
-        <input type ="text" name="TelefonoR"  placeholder=""/>
+        <input type ="text" name="TelefonoResidencial"  placeholder=""/>
 
         <label for="Vivienda">Posee licencia de conducir?</label>
-        <INPUT TYPE="checkbox" NAME="extras" VALUE="Licencia de conducir">
+        <INPUT TYPE="checkbox" NAME="Licenciaconducir" VALUE="Licencia de conducir">
 
-        <label for="email">Email</label>
-        <input type="email" name="email" placeholder="" required />
-
-        <label for="email">Elija una Contraseña</label>
-        <INPUT TYPE="password" NAME="clave" required/>
 
         <label for="Nombre">Cédula de Identidad</label>
         <input type ="text" name="Cedula" id="TCedula" placeholder="Ej.: 001-1234567-1"/>
 
         <label for="Tbasico">Técnico Básico </label>
-        <SELECT NAME="Basico">
+        <SELECT NAME="TecnicoBasico">
         <OPTION VALUE="N/A" SELECTED>N/A
         </SELECT>
 
@@ -130,7 +139,7 @@
         <input type="text" name="Municipio" id="Municipio" placeholder="" required />
 
         <label for="Pais">Pais de Nacionalidad</label>
-        <SELECT NAME="Pais">
+        <SELECT NAME="Nacionalidad">
         <OPTION VALUE="" SELECTED>
         <option value="1">Afganistán</option>
         <option value="2">Albania</option>
@@ -143,21 +152,22 @@
         </SELECT>
         
         <label for="Vivienda">Posee vehiculo propio?</label>
-        <INPUT TYPE="checkbox" NAME="mini" VALUE="Licencia de conducir">
+        <INPUT TYPE="checkbox" NAME="Vehiculo" VALUE="Licencia de conducir">
 
         <label for="Nombre">Telefono Movil</label>
-        <input type ="text" name="TelefonoM"  placeholder=""/>
+        <input type ="text" name="TelefonoMovil"  placeholder=""/>
 
-        <label for="email">Confirmacion de Email</label>
-        <input type="email" name="ema"  placeholder="" required />
+        <label for="email">Email</label>
+        <input type="email" name="email" placeholder="" required />
 
-        <label for="email">Confirme Contraseña</label>
-        <INPUT TYPE="pass" NAME="clave" required/>
+        <label for="email">Elija una Contraseña</label>
+        <INPUT TYPE="password" NAME="clave" required/>
 
         <label for="Terminos">Termino y condiciones</label>
         <INPUT TYPE="checkbox" NAME="Condiciones" VALUE="Terminos y condiciones">
 
         <input type="submit" class="btn btn-primary" name="enviar" value="aceptar"/>
     </form>
+    
     </div>
 </body>

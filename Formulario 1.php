@@ -10,7 +10,7 @@
 <center><h1>Formulario 1</h1></center>
 <body>
 <div class="container">
-<FORM  class="row" METHOD="POST" ACTION="">
+<FORM  class="row" METHOD="POST" ACTION="Conexion1.php">
 
 
         <label for="Año de graduacion">Año de graduacion</label>
@@ -26,7 +26,7 @@
     
           
         <label for="Curso">Curso</label>
-        <SELECT NAME="Institucion">
+        <SELECT NAME="Curso">
         <OPTION VALUE="Curso" SELECTED>
         <OPTION VALUE="1ero" >1ero
         <OPTION VALUE="2do">2do
@@ -39,7 +39,7 @@
         <input type ="text" name="Asunto" id="Asunto" placeholder=""/>
     
         <label for="Carrera tecnica">Carrera tecnica</label>
-        <SELECT NAME="Institucion">
+        <SELECT NAME="Tecnica">
         <OPTION VALUE="Curso" SELECTED>
         <OPTION VALUE="Artes Aplicadas">Artes Aplicadas
         <OPTION VALUE="Artes Culinarias">Artes Culinarias
@@ -52,7 +52,7 @@
         <input type ="text" name="Nombre" id="Nombre" placeholder=""/>
 
         <label for="fecha de nacimiento">fecha de nacimiento</label>
-        <input type="date" name="fecha de nacimiento" id="fecha de nacimiento" placeholder="fecha de nacimiento"/>
+        <input type="date" name="fechaN" id="fechaN" placeholder="fecha de nacimiento"/>
 
 
         <label for="Seccion">Seccion</label>
@@ -98,7 +98,7 @@
         <input type ="text" name="TelefonoR"  placeholder=""/>
 
         <label for="Vivienda">Posee licencia de conducir?</label>
-        <INPUT TYPE="checkbox" NAME="extras[]" VALUE="Licencia de conducir">
+        <INPUT TYPE="checkbox" NAME="extras" VALUE="Licencia de conducir">
 
         <label for="email">Email</label>
         <input type="email" name="email" placeholder="" required />
@@ -109,27 +109,27 @@
         <label for="Nombre">Cédula de Identidad</label>
         <input type ="text" name="Cedula" id="TCedula" placeholder="Ej.: 001-1234567-1"/>
 
-        <label for="Nombre">Técnico Básico </label>
-        <SELECT NAME="Institucion">
+        <label for="Tbasico">Técnico Básico </label>
+        <SELECT NAME="Basico">
         <OPTION VALUE="N/A" SELECTED>N/A
         </SELECT>
 
         <label for="apellidos">Apellidos</label>
         <input type="text" name="apellidos" id="apellidos" placeholder="Apellido" required />
 
-        <label for="Curso">Sexo</label>
-        <SELECT NAME="Genero de la persona">
+        <label for="sexo">Sexo</label>
+        <SELECT NAME="sexoN">
         <OPTION VALUE="Masculino" SELECTED>Masculino
         <OPTION VALUE="Femenino" >Femenino
         </SELECT>
 
-        <label for="email">Sector</label>
+        <label for="sector">Sector</label>
         <input type="text" name="sector" id="sector" placeholder="" required />
 
-        <label for="email">Municipio</label>
+        <label for="Municipio">Municipio</label>
         <input type="text" name="Municipio" id="Municipio" placeholder="" required />
 
-        <label for="Pias">Pais de Nacionalidad</label>
+        <label for="Pais">Pais de Nacionalidad</label>
         <SELECT NAME="Pais">
         <OPTION VALUE="" SELECTED>
         <option value="1">Afganistán</option>
@@ -161,4 +161,3 @@
     </form>
     </div>
 </body>
-<?php

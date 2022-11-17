@@ -24,17 +24,18 @@ DROP TABLE IF EXISTS `alumnos`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `alumnos` (
   `ID_Alumno` int NOT NULL AUTO_INCREMENT,
-  `graduacion` date DEFAULT NULL,
+  `año_graduacion` date DEFAULT NULL,
   `institucion_educativa` varchar(45) DEFAULT NULL,
   `curso` varchar(45) DEFAULT NULL,
   `matricula` varchar(45) DEFAULT NULL,
-  `cedula` varchar(12) DEFAULT NULL,
+  `cedula` varchar(16) DEFAULT NULL,
   `carrera_tecnica` varchar(45) DEFAULT NULL,
   `tecnico_basico` varchar(45) DEFAULT NULL,
   `Nombres` varchar(45) DEFAULT NULL,
   `Apellidos` varchar(45) DEFAULT NULL,
   `fecha_nacimiento` date DEFAULT NULL,
-  `sexo` varchar(45) DEFAULT NULL,
+  `sexo` char(1) DEFAULT NULL,
+  `direccion` varchar(45) DEFAULT NULL,
   `sector` varchar(45) DEFAULT NULL,
   `seccion` varchar(45) DEFAULT NULL,
   `municipio` varchar(45) DEFAULT NULL,
@@ -42,12 +43,12 @@ CREATE TABLE `alumnos` (
   `nacionalidad` varchar(45) DEFAULT NULL,
   `tel_res` varchar(14) DEFAULT NULL,
   `num_cel` varchar(14) DEFAULT NULL,
-  `licencia` varchar(30) DEFAULT NULL,
-  `vehiculo` varchar(30) DEFAULT NULL,
+  `licencia` varchar(2) DEFAULT NULL,
+  `vehiculo` varchar(2) DEFAULT NULL,
   `email` varchar(45) DEFAULT NULL,
   `contraseña` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`ID_Alumno`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -56,7 +57,7 @@ CREATE TABLE `alumnos` (
 
 LOCK TABLES `alumnos` WRITE;
 /*!40000 ALTER TABLE `alumnos` DISABLE KEYS */;
-INSERT INTO `alumnos` VALUES (1,'2022-11-10','IPISA','1ero','00008761-1','0181716','Artes Aplicadas','N/A','Juan','Martinez','2022-07-08','Masculino','Los pastores','A1','Santiago','San cristobal','7','809-000-0981','809-0981-0881','Licencia de conducir','Licencia de conducir','Juan1@gmail.com','12345'),(2,'2022-11-10','IPISA','1ero','00008761-1','0181716','Artes Aplicadas','N/A','Pedro','Mart','2022-07-08','Masculino','Los pastores','A1','Santiago','San cristobal','7','809-000-0981','809-0981-0881','Licencia de conducir','Licencia de conducir','Juan10@gmail.com','12345');
+INSERT INTO `alumnos` VALUES (1,'2022-11-10','IPISA','1ero','51950','402-1801518-5','Artes Aplicadas','N/A','Emil ','Paulino','2005-09-27','M','','Nose','A','Nose','La vega','2','809','8293559767','','','dskhfbskhdf@gmail.com','521581526'),(2,'2020-02-20','IPISA','1ero','3232','402-1801518-5','Artes Gráficas','N/A','Emil ','Paulino','2012-05-05','M','La Zurza','dsfsv','Nose','Nose','bahoruco','1','809','23432','Si','Si','dskhfbskhdf@gmail.com','123232'),(3,'2020-02-20','IPISA','1ero','3232','402-1801518-5','Artes Gráficas','N/A','Emil ','Paulino','2012-05-05','M','La Zurza','dsfsv','Nose','Nose','bahoruco','1','809','23432','Si','Si','dskhfbskhdf@gmail.com','123232'),(4,'2020-02-20','IPISA','1ero','3232','402-1801518-5','Artes Gráficas','N/A','Emil ','Paulino','2012-05-05','M','La Zurza','dsfsv','Nose','Nose','bahoruco','1','809','23432','Si','Si','dskhfbskhdf@gmail.com','123232'),(5,'2020-02-20','IPISA','1ero','3232','402-1801518-5','Artes Gráficas','N/A','Emil ','Paulino','2012-05-05','M','La Zurza','dsfsv','Nose','Nose','bahoruco','1','809','23432','Si','Si','dskhfbskhdf@gmail.com','123232'),(6,'2022-10-30','IPISA','1ero','51950','402-1801518-5','Artes Aplicadas','N/A','Emil ','Paulino','2022-11-22','M','Las Carreras','Nose','Nose','Nose','San Pedro de Macoris','2','809','8293559767','Si','Si','nose@gmail.com','5252500'),(7,'2022-10-30','IPISA','1ero','51950','402-1801518-5','Artes Aplicadas','N/A','Emil ','Paulino','2022-11-22','M','Las Carreras','Nose','Nose','Nose','San Pedro de Macoris','2','809','8293559767','Si','Si','nose@gmail.com','5252500'),(8,'2021-02-19','IPISA','1ero','51950','402-1801518-5','Artes Aplicadas','N/A','Emil ','Paulino','2022-11-30','M','La Zurza','dsfsv','A','Nose','La vega','2','8096122506','23432','Si','','fepaulino18@hotmail.com','+60265025'),(9,'2022-11-30','Institutos','Curso','','','Curso','N/A','mhvchg','jhgv','2022-11-03','M','klb','kihbj','',';kjiguligu','Provincia','','','','','','nose@gmail.com','54165165'),(10,'2022-11-30','Institutos','Curso','','','Curso','N/A','mhvchg','jhgv','2022-11-03','M','klb','kihbj','',';kjiguligu','Provincia','','','','','','nose@gmail.com','54165165'),(11,'2022-10-30','IPISA','1ero','51950','402-1801518-5','Artes Aplicadas','N/A','Emil','Paulino','2005-09-27','F','La Zurza','dsfsv','Nose',';kjiguligu','Maria Trinidad Sanchez','Albania','809','78987','','','dskhfbskhdf@gmail.com','32025000');
 /*!40000 ALTER TABLE `alumnos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -123,7 +124,7 @@ CREATE TABLE `vacantes` (
   `persona_contacto` varchar(45) NOT NULL,
   `telefono_contacto` varchar(14) NOT NULL,
   PRIMARY KEY (`ID_Vacante`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -132,6 +133,7 @@ CREATE TABLE `vacantes` (
 
 LOCK TABLES `vacantes` WRITE;
 /*!40000 ALTER TABLE `vacantes` DISABLE KEYS */;
+INSERT INTO `vacantes` VALUES (1,'','Hola','fsvdsfv','20000','Las Palomas, Licey Al Medio, Santiago, RD','Fijo','8:30 - 6:30','nosex64','Alesa','8293559767'),(2,'Hola','','','','','Fijo','','','',''),(3,'Hola','','','','','Fijo','','','',''),(4,'Hola','','','','','Fijo','','','',''),(5,'','','','','','','','','','');
 /*!40000 ALTER TABLE `vacantes` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -144,4 +146,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-11-10 19:23:09
+-- Dump completed on 2022-11-17 11:08:58

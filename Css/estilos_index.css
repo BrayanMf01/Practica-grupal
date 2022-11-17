@@ -25,11 +25,12 @@ header img{
     margin-left: 20px;
 }
 .desctxt{
+    font-size: 20px;
     display: inline-block;
     vertical-align: middle;
     margin: -168px;
-    margin-top: -200px;
-    margin-left: -320px;
+    margin-top: -180px;
+    margin-left: -350px;
     color: rgb(255, 255, 255,255);
 }
 
@@ -44,4 +45,22 @@ header img{
 }
 .navegacion a{
     color: white;
+}
+p{
+    max-width: 500px;
+    padding: 20px;
+    margin: auto;
+}
+body h1{
+    text-align: center;
+    margin: 20px;
+}
+h2{
+    text-align: center;
+    margin: 20px;
+}
+h3{
+    max-width: 500px;
+    padding: 20px;
+    margin: auto;
 }

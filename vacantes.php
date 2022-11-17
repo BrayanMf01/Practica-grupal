@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Css/estilos_vacantes.css">
+    <link rel="Shortcut icon" type="image/x-icon" href="img/Logo.jpg">
     <title>Registrar una vacante</title>
 </head>
 <header>
@@ -17,6 +18,7 @@
           <li><a href="pasantia.html">Pasantía</a></li>
           <li><a href="colaboradores.html">Colaboradores</a></li>
           <li><a href="familia.html">Familia</a></li>
+          <li><a href="Registros.html">Registros</a></li>
       </ul>
   </nav>
 </header>

@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Css/estilos_index.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <title>Formulario 1 </title>
 </head>
@@ -25,18 +24,18 @@
 <center><h1>Formulario 1</h1></center>
 <body>
 <div class="container">
-<FORM  class="row" METHOD="POST" ACTION="Conexion F1.php">
+<FORM  class="row" METHOD="POST" ACTION="Formulario 1.php">
 
 
-        <label for="Año de graduacion">Año de graduacion</label>
+        <label for="Año de graduacion">Año de graduación</label>
         <input type="date" name="graduacion"  class="form-input" placeholder="Año de la graduacion"/>
     
-        <label for="Institución educativa a la que pertenece">Institución educativa a la que pertenece</label>
+        <label for="Institución educativa a la que pertenece">Institución Educativa a la que pertenece</label>
         <SELECT NAME="Institucion">
         <OPTION VALUE="Institutos" SELECTED>
-        <OPTION VALUE="IPISA" >Ipisa
-        <OPTION VALUE="DON Bosco">Don Bosco
-        <OPTION VALUE="Politecnico de las mercedes">Politecnico de las mercerdes
+        <OPTION VALUE="IPISA" >IPISA
+        <OPTION VALUE="Don Bosco">Don Bosco
+        <OPTION VALUE="Politécnico Las Mercedes">Politécnico Las Mercerdes
         </SELECT>
     
           
@@ -50,10 +49,10 @@
         </SELECT>
 
 
-        <label for="Matricula">Matricula</label>
-        <input type ="text" name="Matricula" id="Asunto" placeholder=""/>
+        <label for="Matricula">Matrícula</label>
+        <input type ="text" name="Matricula" placeholder=""/>
     
-        <label for="Carrera tecnica">Carrera tecnica</label>
+        <label for="Carrera tecnica">Carrera técnica</label>
         <SELECT NAME="CarerraTecnica">
         <OPTION VALUE="Curso" SELECTED>
         <OPTION VALUE="Artes Aplicadas">Artes Aplicadas
@@ -66,58 +65,58 @@
         <label for="Nombre">Nombre</label>
         <input type ="text" name="Nombre" id="Nombre" placeholder=""/>
 
-        <label for="fecha de nacimiento">fecha de nacimiento</label>
+        <label for="fecha de nacimiento">Fecha de Nacimiento</label>
         <input type="date" name="fechaNacimiento" id="fechaN" placeholder="fecha de nacimiento"/>
 
 
-        <label for="Seccion">Seccion</label>
+        <label for="Seccion">Sección</label>
         <input type ="text" name="Seccion" id="Seccion" placeholder=""/>
 
         <label for="Provincia">Provincia</label>
         <SELECT NAME="Provincia">
         <OPTION VALUE="Provincia" SELECTED>
         <OPTION VALUE="Azua">Azua
-        <OPTION VALUE="bahoruco">bahoruco
+        <OPTION VALUE="Bahoruco">Bahoruco
         <OPTION VALUE="Dajabon">Dajabon
         <OPTION VALUE="Distrito Nacional">Distrito Nacional
         <OPTION VALUE="Duarte">Duarte
         <OPTION VALUE="El seibo">El seibo
-        <OPTION VALUE="Elias Piña">Elias Piña
+        <OPTION VALUE="Elias Piña">Elías Piña
         <OPTION VALUE="Espaillat">Espaillat
         <OPTION VALUE="Hato Mayor">Hato Mayor
         <OPTION VALUE="Hermanas Mirabal">Hermanas Mirabal
         <OPTION VALUE="Independencia">Independencia
         <OPTION VALUE="La Altagracia">La Altagracia
         <OPTION VALUE="La Romana">La Romana
-        <OPTION VALUE="La vega">La vega
-        <OPTION VALUE="Maria Trinidad Sanchez">Maria Trinidad Sanchez
+        <OPTION VALUE="La vega">La Vega
+        <OPTION VALUE="Maria Trinidad Sanchez">Maria Trinidad Sánchez
         <OPTION VALUE="Monseñor Nouel">Monseñor Nouel
         <OPTION VALUE="Monte Cristi">Monte Cristi
         <OPTION VALUE="Monte Plata">Monte Plata
         <OPTION VALUE="Pedernales">Pedernales
         <OPTION VALUE="Peravia">Peravia
         <OPTION VALUE="Puerto Plata">Puerto Plata
-        <OPTION VALUE="Samana">Samana
-        <OPTION VALUE="San cristobal">San cristobal
-        <OPTION VALUE="San jose de Ocoa">San jose de Ocoa
+        <OPTION VALUE="Samana">Samaná
+        <OPTION VALUE="San cristobal">San Cristóbal
+        <OPTION VALUE="San jose de Ocoa">San José de Ocoa
         <OPTION VALUE="San juan">San juan
-        <OPTION VALUE="San Pedro de Macoris">
-        <OPTION VALUE="Sanchez Ramirez">
-        <OPTION VALUE="Santiago">
-        <OPTION VALUE="Santiago Rodriguez">
-        <OPTION VALUE="Santo Domingo">
-        <OPTION VALUE="Valverde">   
+        <OPTION VALUE="San Pedro de Macoris">San Pedro de Macorís
+        <OPTION VALUE="Sanchez Ramirez">Sánchez Ramírez
+        <OPTION VALUE="Santiago">Santiago
+        <OPTION VALUE="Santiago Rodriguez">Santiago Rodríguez
+        <OPTION VALUE="Santo Domingo">Santo Domingo
+        <OPTION VALUE="Valverde">Valverde
         </SELECT>
        
-        <label for="Nombre">Telefono de Residencial</label>
+        <label for="Nombre">Teléfono de Residencial</label>
         <input type ="text" name="TelefonoResidencial"  placeholder=""/>
 
         <label for="Vivienda">Posee licencia de conducir?</label>
-        <INPUT TYPE="checkbox" NAME="Licenciaconducir" VALUE="Licencia de conducir">
+        <INPUT TYPE="checkbox" NAME="Licenciaconducir" VALUE="Si">
 
 
         <label for="Nombre">Cédula de Identidad</label>
-        <input type ="text" name="Cedula" id="TCedula" placeholder="Ej.: 001-1234567-1"/>
+        <input type ="text" name="Cedula" placeholder="Ej.: 001-1234567-1"/>
 
         <label for="Tbasico">Técnico Básico </label>
         <SELECT NAME="TecnicoBasico">
@@ -129,46 +128,87 @@
 
         <label for="sexo">Sexo</label>
         <SELECT NAME="sexoN">
-        <OPTION VALUE="Masculino" SELECTED>Masculino
-        <OPTION VALUE="Femenino" >Femenino
+        <OPTION VALUE="M" SELECTED>Masculino
+        <OPTION VALUE="F" >Femenino
         </SELECT>
 
         <label for="sector">Sector</label>
         <input type="text" name="sector" id="sector" placeholder="" required />
 
+        <label for="direccion">Dirección</label>
+        <input type="text" name="direccion" placeholder="" required />
+
         <label for="Municipio">Municipio</label>
         <input type="text" name="Municipio" id="Municipio" placeholder="" required />
 
-        <label for="Pais">Pais de Nacionalidad</label>
+        <label for="Pais">País de Nacionalidad</label>
         <SELECT NAME="Nacionalidad">
         <OPTION VALUE="" SELECTED>
-        <option value="1">Afganistán</option>
-        <option value="2">Albania</option>
-        <option value="3">Alemania</option>
-        <option value="4">Andorra</option>
-        <option value="5">Angola</option>
-        <option value="6">Estados unidos</option>
-        <option value="7">Republica Dominicana</option>
-        <option value="8">España</option>
+        <option value="Afganistán">Afganistán</option>
+        <option value="Albania">Albania</option>
+        <option value="Alemania">Alemania</option>
+        <option value="Andorra">Andorra</option>
+        <option value="Angola">Angola</option>
+        <option value="Estados Unidos">Estados Unidos</option>
+        <option value="Estados Unidos">República Dominicana</option>
+        <option value="España">España</option>
         </SELECT>
         
-        <label for="Vivienda">Posee vehiculo propio?</label>
-        <INPUT TYPE="checkbox" NAME="Vehiculo" VALUE="Licencia de conducir">
+        <label for="Vivienda">Posee vehículo propio?</label>
+        <INPUT TYPE="checkbox" NAME="Vehiculo" VALUE="Si">
 
-        <label for="Nombre">Telefono Movil</label>
+        <label for="Nombre">Teléfono Móvil</label>
         <input type ="text" name="TelefonoMovil"  placeholder=""/>
 
         <label for="email">Email</label>
         <input type="email" name="email" placeholder="" required />
 
-        <label for="email">Elija una Contraseña</label>
+        <label for="email">Elíja una Contraseña</label>
         <INPUT TYPE="password" NAME="clave" required/>
 
-        <label for="Terminos">Termino y condiciones</label>
+        <label for="Terminos">Términos y Condiciones</label>
         <INPUT TYPE="checkbox" NAME="Condiciones" VALUE="Terminos y condiciones">
 
         <input type="submit" class="btn btn-primary" name="enviar" value="aceptar"/>
+
+  
     </form>
-    
+    <?php 
+
+require("conexion.php");
+insertar($mysqli);
+function insertar ($mysqli){
+    $graduacion=$_POST['graduacion'] ?? null;
+    $Institucion=$_POST['Institucion'] ?? null; 
+    $Curso=$_POST['Curso'] ?? null;
+    $Matricula=$_POST['Matricula'] ?? null; 
+    $Cedula=$_POST['Cedula'] ?? null;
+    $CarerraTecnica=$_POST['CarerraTecnica'] ?? null; 
+    $TecnicoBasico=$_POST['TecnicoBasico'] ?? null;
+    $Nombre=$_POST['Nombre'] ?? null;
+    $apellidos=$_POST['apellidos'] ?? null;
+    $fechaNacimiento=$_POST['fechaNacimiento'] ?? null;
+    $sexoN=$_POST['sexoN'] ?? null;
+    $direccion = $_POST['direccion']?? null;
+    $sector=$_POST['sector'] ?? null;
+    $Seccion=$_POST['Seccion'] ?? null;
+    $Municipio=$_POST['Municipio'] ?? null;
+    $Provincia=$_POST['Provincia'] ?? null;
+    $Nacionalidad=$_POST['Nacionalidad'] ?? null;
+    $TelefonoResidencial=$_POST['TelefonoResidencial'] ?? null;
+    $TelefonoMovil=$_POST['TelefonoMovil'] ?? null;
+    $Licenciaconducir=$_POST['Licenciaconducir'] ?? null;
+    $Vehiculo=$_POST['Vehiculo'] ?? null;
+    $email=$_POST['email'] ?? null;
+    $clave=$_POST['clave'] ?? null;
+
+
+    $query= "insert into alumnos values(default,'$graduacion','$Institucion','$Curso','$Matricula','$Cedula','$CarerraTecnica','$TecnicoBasico','$Nombre','$apellidos','$fechaNacimiento','$sexoN','$direccion','$sector','$Seccion','$Municipio','$Provincia','$Nacionalidad','$TelefonoResidencial','$TelefonoMovil','$Licenciaconducir','$Vehiculo','$email','$clave')";
+
+    $result=mysqli_query($mysqli,$query);
+}
+mysqli_close($mysqli);
+
+?>
     </div>
 </body>

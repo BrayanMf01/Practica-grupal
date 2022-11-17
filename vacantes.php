@@ -26,23 +26,23 @@
             <ul>
                 <li>
                     <label>Nombre de la Empresa:<br></label>
-                    <input name="nombre">
+                    <input name="nombre" required>
                 </li>
                 <li>
                     <label>Nombre del puesto:<br></label>
-                    <input name="nombre_puesto">
+                    <input name="nombre_puesto" required>
                 </li>
                 <li>
                 <label>Funciones o perfil del puesto:<br></label>
-                <textarea name="perfil_puesto"></textarea>
+                <textarea name="perfil_puesto"  required></textarea>
                 </li>
                 <li>
                 <label>Sueldo:<br></label>
-                <input name="sueldo">
+                <input name="sueldo" required>
                 </li>
                 <li>
                 <label>Ubicacion:<br></label>
-                <input name="ubicacion">
+                <input name="ubicacion" required>
                 </li>
                 <li>
                 <label>Tipo de contrato:<br></label>
@@ -53,19 +53,19 @@
                 </li>
                 <li>
                 <label>Horario:<br></label>
-                <input name="horario">  
+                <input name="horario" required>  
                 </li>
                 <li>
                 <label>Correo para fines de curriculum:<br></label>
-                <input name="correo_curriculum">  
+                <input type="email" name="correo_curriculum" required>  
                 </li>
                 <li>
                 <label>Persona de Contacto:<br></label>
-                <input name="persona_contacto">  
+                <input name="persona_contacto" required>  
                 </li>
                 <li>
                 <label>Teléfono:<br></label>
-                <input name="telefono_contacto">  
+                <input name="telefono_contacto" required>  
                 </li>
                 <button type="submit">Enviar Datos</button>
             </ul>

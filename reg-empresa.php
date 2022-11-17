@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="Shortcut icon" type="image/x-icon" href="img/Logo.jpg">
     <link rel="stylesheet" href="Css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <title>Registro de Empresa</title>
 </head>
 <header>
@@ -153,7 +151,7 @@
         <label>Contraseña:</label>
         <input type="password" name="clave" required>
 
-      <button type="submit" class="btn btn-primary" >Procesar</button>
+      <button type="submit">Procesar</button>
     </ul>
     </form> 
 </body>

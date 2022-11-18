@@ -24,80 +24,55 @@
 </header>
 <body>
     <h1>Formulario para registro de una vacante</h1>
-        <form action="vacantes.php" method="POST">
+        <form action="insertar_vacantes.php" method="POST">
             <ul>
                 <li>
                     <label>Nombre de la Empresa:<br></label>
-                    <input name="nombre">
+                    <input name="nombre" REQUIRED>
                 </li>
                 <li>
                     <label>Nombre del puesto:<br></label>
-                    <input name="nombre_puesto">
+                    <input name="nombre_puesto" REQUIRED>
                 </li>
                 <li>
                 <label>Funciones o perfil del puesto:<br></label>
-                <textarea name="perfil_puesto"></textarea>
+                <textarea name="perfil_puesto" REQUIRED></textarea>
                 </li>
                 <li>
                 <label>Sueldo:<br></label>
-                <input name="sueldo">
+                <input name="sueldo" REQUIRED>
                 </li>
                 <li>
                 <label>Ubicacion:<br></label>
-                <input name="ubicacion">
+                <input name="ubicacion" REQUIRED>
                 </li>
                 <li>
                 <label>Tipo de contrato:<br></label>
-                <select name="tipo_contrato">
+                <select name="tipo_contrato" REQUIRED>
                     <option value="Temporal" SELECTED>Temporal
                     <option value="Fijo" SELECTED>Fijo
                 </select>
                 </li>
                 <li>
                 <label>Horario:<br></label>
-                <input name="horario">  
+                <input name="horario" REQUIRED>  
                 </li>
                 <li>
                 <label>Correo para fines de curriculum:<br></label>
-                <input name="correo_curriculum">  
+                <input name="correo_curriculum" REQUIRED>  
                 </li>
                 <li>
                 <label>Persona de Contacto:<br></label>
-                <input name="persona_contacto">  
+                <input name="persona_contacto" REQUIRED>  
                 </li>
                 <li>
                 <label>Teléfono:<br></label>
-                <input name="telefono_contacto">  
+                <input name="telefono_contacto" REQUIRED>  
                 </li>
                 <button type="submit">Enviar Datos</button>
             </ul>
-        </form>
+       
 
-        
-        <?php 
-
-require ("conexion.php");
-
-insertar($mysqli);
-function insertar ($mysqli){
-    $nombre = $_POST['nombre'] ?? null;
-    $puesto = $_POST['nombre_puesto'] ?? null;
-    $perfil = $_POST['perfil_puesto'] ?? null;
-    $sueldo = $_POST['sueldo'] ?? null;
-    $ubicacion = $_POST['ubicacion'] ?? null;
-    $tipo_contrato = $_POST['tipo_contrato'] ?? null;
-    $horario = $_POST['horario'] ?? null;
-    $correo = $_POST['correo_curriculum'] ?? null;
-    $nombre_persona = $_POST['persona_contacto'] ?? null;
-    $telefono = $_POST['telefono_contacto'] ?? null;
-
-$consulta = "INSERT INTO vacantes(nombre_empresa, nombre_puesto, perfil_puesto, sueldo, ubicacion, tipo_contrato, horario, correo_curriculum, persona_contacto, telefono_contacto) VALUES ('$nombre','$puesto','$perfil', '$sueldo','$ubicacion','$tipo_contrato','$horario','$correo','$nombre_persona','$telefono')";
-mysqli_query($mysqli, $consulta);
-}
-
-mysqli_close($mysqli);
-
-?>
-
+<button onclick="location.href='control_vacantes.php'">Control Vacantes</button>
 </body>
 </html>

@@ -23,8 +23,8 @@
   </nav>
 </header>
 <body>
-   <h1>Formulario de Registro de Empresas</h1>
-   <form class="row" METHOD="POST" ACTION="Conexion F3.php">
+<h1>Formulario de Registro de Empresas</h1>
+   <form class="row" METHOD="POST" ACTION="guardar.php">
     <ul>
       <li>
         <label>Nombre de la Empresa:</label>
@@ -32,7 +32,7 @@
       </li>
       <li>
         <label>RNC:</label>
-        <input type="text" name="rnc">
+        <input type="text" name="RNC">
       </li>
       <li>
         <label>¿Desea que se concozca su empresa?:</label>
@@ -154,5 +154,7 @@
       <button type="submit">Procesar</button>
     </ul>
     </form> 
+
+
 </body>
 </html>

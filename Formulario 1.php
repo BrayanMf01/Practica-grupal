@@ -23,7 +23,7 @@
       </ul>
   </nav>
 </header>
-<center><h1>Formulario 1</h1></center>
+<center><h1>Formulario de registros de Estudiantes</h1></center>
 <body>
 <div class="container">
 <FORM  class="row" METHOD="POST" ACTION="almacen.php">

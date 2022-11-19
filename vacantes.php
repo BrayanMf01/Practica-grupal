@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Css/estilos_vacantes.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.24/sweetalert2.all.js"></script>
     <link rel="Shortcut icon" type="image/x-icon" href="img/Logo.jpg">
     <title>Registrar una vacante</title>
 </head>
@@ -26,6 +27,10 @@
     <h1>Formulario para registro de una vacante</h1>
         <form action="insertar_vacantes.php" method="POST">
             <ul>
+            <li>
+                    <label>ID Único de la Empresa:<br></label>
+                    <input type="number" name="id" REQUIRED>
+                </li>
                 <li>
                     <label>Nombre de la Empresa:<br></label>
                     <input name="nombre" REQUIRED>
@@ -59,7 +64,7 @@
                 </li>
                 <li>
                 <label>Correo para fines de curriculum:<br></label>
-                <input name="correo_curriculum" REQUIRED>  
+                <input type="email" name="correo_curriculum" REQUIRED>  
                 </li>
                 <li>
                 <label>Persona de Contacto:<br></label>

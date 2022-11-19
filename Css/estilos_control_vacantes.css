@@ -56,11 +56,11 @@ h1{
 	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 table{
-	margin-left: 13px;
+	margin: auto;
 	background-color: white;
 	text-align: left;
 	border-collapse: collapse;
-	width: 98%;
+	width: 95%;
 }
 
 th, td{

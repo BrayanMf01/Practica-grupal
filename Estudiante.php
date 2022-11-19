@@ -4,38 +4,55 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="Css/estilos_control_vacantes.css">
     <link rel="stylesheet" href="Css/estilos_index.css">
-    <title>Document</title>
+    <title>Registros de los Estudiantes</title>
 </head>
+<header>
+  <img src="https://ipisa.edu.do/wp-content/uploads/2018/08/logo-1.png" alt="logo ipisa">
+  <h1 class="headtxt">Instituto Politécnico Industrial de Santiago</h1>
+  <h3 class="desctxt">Departamento de Vinculación Laboral</h3>
+  <nav class="navegacion">
+      <ul class="menu">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="pasantia.html">Pasantía</a></li>
+          <li><a href="colaboradores.html">Colaboradores</a></li>
+          <li><a href="familia.html">Familia</a></li>
+          <li><a href="Registros.html">Registros</a></li>
+      </ul>
+  </nav>
+</header>
 <body>
-<Center><h1>Lista de Alumnos</h1></Center>
-    <table class="table table-dark table-striped-columns" border="1">
+
+<Center><h1>Registros de Usuarios</h1></Center>
+    <table class="table table-dark table-striped-columns" border="2">
+    <Center><h1>Lista de Alumnos</h1></Center>
 <tr>
     <th scope="col">ID</th>
-    <th scope="col">graduacion</th>
-    <th scope="col">institucion educativa</th>
-    <th scope="col">curso</th>
-    <th scope="col">matricula</th>
-    <th scope="col">cedula</th>
-    <th scope="col">carrera tecnica</th>
-    <th scope="col">tecnico basico</th>
+    <th scope="col">Año de Graduacion</th>
+    <th scope="col">Institución Educativa</th>
+    <th scope="col">Curso</th>
+    <th scope="col">Matrícula</th>
+    <th scope="col">Cédula</th>
+    <th scope="col">Carrera Técnica</th>
+    <th scope="col">Técnico Básico</th>
     <th scope="col">Nombres</th>
     <th scope="col">Apellidos</th>
-    <th scope="col">fecha nacimiento</th>
-    <th scope="col">sexo</th>
-    <th scope="col">direccion</th>
-    <th scope="col">sector</th>
-    <th scope="col">seccion</th>
-    <th scope="col">municipio</th>
-    <th scope="col">provincia</th>
-    <th scope="col">nacionalidad</th>
-    <th scope="col">telefono de residencia</th>
-    <th scope="col">numero celular</th>
+    <th scope="col">Fecha de Nacimiento</th>
+    <th scope="col">Sexo</th>
+    <th scope="col">Dirección</th>
+    <th scope="col">Sector</th>
+    <th scope="col">Sección</th>
+    <th scope="col">Municipio</th>
+    <th scope="col">Provincia</th>
+    <th scope="col">Nacionalidad</th>
+    <th scope="col">Teléfono de Residencia</th>
+    <th scope="col">Número de Celular</th>
     <th scope="col">Licencia</th>
-    <th scope="col">vehiculo</th>
-    <th scope="col">email</th>
-    <th scope="col">contraseña</th>
+    <th scope="col">Vehículo</th>
+    <th scope="col">E-mail</th>
+    <th scope="col">Contraseña</th>
+    <th scope="col">Eliminar</th>
 </tr>
 <?php
 include_once 'Conexion F1.php';
@@ -48,7 +65,7 @@ if($total>0){
     echo
     "<tr>
     <td>". $row['ID_Alumno'] ."</td>
-    <td>". $row['graduacion'] ."</td>
+    <td>". $row['año_graduacion'] ."</td>
     <td>". $row['institucion_educativa'] ."</td>
     <td>". $row['curso'] ."</td>
     <td>". $row['matricula'] ."</td>
@@ -92,12 +109,6 @@ if($total>0){
     <input type="text" class="form-control" name="par" placeholder="par">
     <Button type="Submit" class="btn btn-lg btn-primary" name="Busqueda">Buscar</Button>
      </form>
-    </center>
-    <center>
-    <h3>Atras</h3>
-    <form action="Registros.html" method="POST">
-    <Button type="Submit" class="btn btn-lg btn-primary" name="Atras">Atras</Button>
-    </form>
     </center>
 </body>
 </html>

@@ -26,6 +26,7 @@
     <table  border="2">
         <tr>
             <th>ID</th>
+            <th>ID Empresa</th>
             <th>Nombre Empresa</th>
             <th>Puesto</th>
             <th>Perfil del Puesto</th>
@@ -64,6 +65,7 @@ function mostrar($mysqli){
 
             echo "<tr> 
             <td>" . $row['ID_Vacante'] . "</td> 
+            <td>" . $row['ID_Empresa'] . "</td>
             <td>" . $row['nombre_empresa'] . "</td>
              <td>" . $row['nombre_puesto'] . "</td> 
              <td>" . $row['perfil_puesto'] . "</td>              
@@ -91,6 +93,7 @@ function buscar($mysqli){
 
             echo "<tr> 
             <td>" . $row['ID_Vacante'] . "</td> 
+            <td>" . $row['ID_Empresa'] . "</td>
             <td>" . $row['nombre_empresa'] . "</td>
              <td>" . $row['nombre_puesto'] . "</td> 
              <td>" . $row['perfil_puesto'] . "</td>              

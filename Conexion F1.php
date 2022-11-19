@@ -1,7 +1,7 @@
 <?php
     $servidor="localhost";
     $nombreusuario="root";
-    $password="Mauricio2021";
+    $password="27092005Emil";
     $basedatos="db_ipisa";
 
 $conexiones = new mysqli($servidor, $nombreusuario, $password,$basedatos);

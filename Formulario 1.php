@@ -72,6 +72,10 @@
         <input type ="text" name="Nombre" id="Nombre" placeholder=""/>
         </li>
         <li>
+        <label for="apellidos">Apellidos<br></label>
+        <input type="text" name="apellidos" id="apellidos" placeholder="Apellido" required />
+        </li>
+        <li>
         <label for="fecha de nacimiento">Fecha de Nacimiento<br></label>
         <input type="date" name="fechaNacimiento" id="fechaN" placeholder="fecha de nacimiento"/>
         </li>
@@ -118,7 +122,7 @@
         </li>
         <label for="Nombre">Teléfono de Residencial<br></label>
         <input type ="text" name="TelefonoResidencial"  placeholder=""/>
-        <li>
+        <li>   
         <label for="Vivienda">Posee licencia de conducir?<br></label>
         <INPUT TYPE="checkbox" NAME="licencia" VALUE="Si pose licencia de conducir">
         </li>
@@ -133,14 +137,10 @@
         </SELECT>
         </li>
         <li>
-        <label for="apellidos">Apellidos<br></label>
-        <input type="text" name="apellidos" id="apellidos" placeholder="Apellido" required />
-        </li>
-        <li>
         <label for="sexo">Sexo<br></label>
-        <SELECT NAME="sexoN">
-        <OPTION VALUE="Masculino" SELECTED>Masculino
-        <OPTION VALUE="Femenino" >Femenino
+        <SELECT NAME="sexo">
+        <OPTION VALUE="M" SELECTED>Masculino
+        <OPTION VALUE="F" >Femenino
         </SELECT>
         </li>
         <li>
@@ -167,7 +167,7 @@
         </li>
         <li>
         <label for="Vivienda">Posee vehículo propio?<br></label>
-        <INPUT TYPE="checkbox" NAME="Vehiculo" VALUE="Si pose vehiculo">
+        <input TYPE="checkbox" NAME="vehiculo" VALUE="Si">
         </li>
         <li>
         <label for="Nombre">Telefono Móvil<br></label>
@@ -184,7 +184,7 @@
         <INPUT TYPE="checkbox" NAME="Condiciones" VALUE="Terminos y condiciones">
         </li>
         <li>
-        <input type="submit" class="btn btn-primary" name="enviar" value="aceptar"/>
+        <input type="submit" class="btn btn-primary" name="enviar" value="aceptar" required/>
         </li>
         </ul>
     </form>

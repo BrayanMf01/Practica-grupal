@@ -36,6 +36,7 @@
 
         if($resultcheck > 0){
             $row = mysqli_fetch_assoc($result);
+            $id_empresa= $row['ID_Empresa'];
             $nombre = $row['nombre_empresa'];
             $puesto = $row['nombre_puesto'];
             $perfil = $row['perfil_puesto'];
@@ -46,16 +47,18 @@
             $correo = $row['correo_curriculum'];
             $persona = $row['persona_contacto'];
             $telefono = $row['telefono_contacto'];
-
-
         }
     ?>
 
 <form action="update_vacantes.php" method="POST">
     <ul>
                 <li>
-                    <label>ID:<br></label>
-                    <input name="ID" value="<?php echo $id?>">
+                    <label>ID Vacante:<br></label>
+                    <input name="ID" value="<?php echo $id?>" disabled>
+                </li>
+                <li>
+                    <label>ID Vacante:<br></label>
+                    <input name="ID" value="<?php echo $id_empresa?>">
                 </li>
                 <li>
                     <label>Nombre Empresa:<br></label>
@@ -87,7 +90,7 @@
                 </li>                
                 <li>
                     <label>Correo:<br></label>
-                    <input name="Correo" value="<?php echo $correo?>">
+                    <input type="email" name="Correo" value="<?php echo $correo?>">
                 </li>                
                 <li>
                     <label>Persona:<br></label>

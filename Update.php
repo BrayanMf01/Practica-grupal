@@ -4,17 +4,31 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="Css/Estilos_estudiantes">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.24/sweetalert2.all.js"></script>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-        <title>Atualizar</title>
-</head>
-<body>
         
-</body>
-</html>
+        <title>Actualizar</title>
+</head>
+<header>
+  <img src="https://ipisa.edu.do/wp-content/uploads/2018/08/logo-1.png" alt="logo ipisa">
+  <h1 class="headtxt">Instituto Politécnico Industrial de Santiago</h1>
+  <h3 class="desctxt">Departamento de Vinculación Laboral</h3>
+  <nav class="navegacion">
+      <ul class="menu">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="pasantia.html">Pasantía</a></li>
+          <li><a href="colaboradores.html">Colaboradores</a></li>
+          <li><a href="familia.html">Familia</a></li>
+          <li><a href="Registros.html">Registros</a></li>
+      </ul>
+  </nav>
+</header>
+<body>
+<center><h1>Editar Información de Estudiantes</h1></center>
+
 <?php
 include_once 'Conexion F1.php';
-$id = $_POST['id'];
+$id = $_REQUEST['id_alumno'];
 
 $sql = "SELECT * FROM alumnos where ID_Alumno=$id;";
 
@@ -46,75 +60,178 @@ if($resultCheck > 0){
     $vehiculo=$row['vehiculo'];
     $email=$row['email'];
     $contraseña=$row['contraseña'];
-
 }
-else{ 
-    ?>
-    <script>
-          Swal.fire({
-            icon: 'warning',
-            title: 'Nombre o id Invalido',
-            text: 'Registro no encontrado, revise el nombre o id'
-        }).then(function () {
-            window.location.href = '../index.php';
-        })  
-    </script>
-       <?php
-       
-    }
-       ?>
+?>
     
 
+    <form method="POST" action="Atualizar.php">
+<ul>
+        <li>
+        <label>ID Estudiante<br></label>
+        <input name="id" value="<?php echo $id?>">
+        </li>
+        <li>
+        <label for="Año de graduacion">Año de graduación<br></label>
+        <input type="date" name="graduacion"  value="<?php echo $graduacion?>" required>
+        </li>
+        <li>
+        <label for="Institución educativa a la que pertenece">Institución Educativa  a la que pertenece<br></label>
+        <SELECT NAME="Institucion" required>
+        <OPTION VALUE="Institutos">
+        <OPTION VALUE="IPISA" >IPISA
+        <OPTION VALUE="Don Bosco">Don Bosco
+        <OPTION VALUE="Politécnico Las Mercedes">Politécnico Las Mercerdes
+        </SELECT>
+        </li>
+        <li>
+        <label for="Curso">Curso<br></label>
+        <SELECT NAME="Curso" required>
+        <OPTION VALUE="Curso">
+        <OPTION VALUE="1ero" >1ero
+        <OPTION VALUE="2do">2do
+        <OPTION VALUE="3ero">3ro
+        <OPTION VALUE="4to">4to  
+        </SELECT>
+        </li>
 
-?>
-        <form action="Atualizar.php" method="POST">
-                
-        <input type="text" name="id"  class="form-control" placeholder="ID" value="<?php echo $id?>">
-<br>
-        <input type="date" name="graduacion"  class="form-input" placeholder="Año de la graduacion" value="<?php echo $graduacion?>">
-<br>
-        <input type="text" name="institucion_educativa"  class="form-input" placeholder="Instituto" value="<?php echo $institucion_educativa?>">
-<br>
-        <input type="text" name="curso" class="form-control" placeholder="curso" value="<?php echo $curso?>">
-<br>
-        <input type ="text" name="Matricula" class="form-control" id="Asunto" placeholder="" value="<?php echo $matricula?>">
-<br>
-        <input type="text" name="CarerraTecnica"  class="form-control" placeholder="CarerraTecnica" value="<?php  echo $carrera_tecnica ?>">
-<br>
-        <input type ="text" name="Nombre" id="Nombre" class="form-control" placeholder=""  value="<?php  echo $Nombres ?>">
-<br>
-        <input type="date" name="fecha_nacimiento"  class="form-control"id="fechaN" placeholder="fecha de nacimiento" value="<?php  echo $fecha_nacimiento ?>" >
-<br>
-        <input type ="text" name="seccion" id="Seccion"  class="form-control"placeholder="" value="<?php  echo $seccion ?>">
-<br>
-        <input type ="text" name="provincia" id="Provincia"  class="form-control" placeholder="" value="<?php  echo $provincia ?>">
-<br>
-        <input type ="text" name="TelefonoResidencial"class="form-control"  placeholder="" value="<?php  echo $tel_res ?>">
-<br>
-        <INPUT TYPE="checkbox" NAME="licencia"  class="form-control" value="<?php  echo $licencia ?>">
-<br>
-        <input type ="text" name="Cedula" class="form-control" id="TCedula" placeholder="Ej.: 001-1234567-1" value="<?php  echo $cedula ?>">
-<br>
-        <input type ="text" name="TecnicoBasico"  class="form-control" id="TecnicoBasico" placeholder="" value="<?php  echo $tecnico_basico ?>">
-<br>
-        <input type="text" name="apellidos" id="apellidos" class="form-control" placeholder="Apellido"  value="<?php  echo $Apellidos ?>">
-<br>
-        <input type="text" name="sexo" id="sexoN"  class="form-control" placeholder="" value="<?php  echo $sexo ?>">
-<br>
-        <input type="text" name="sector" id="sector"  class="form-control"placeholder="" value="<?php  echo $sector ?>" >
-<br>
-        <input type="text" name="municipio" id="Municipio" class="form-control" placeholder="" value="<?php  echo $municipio ?>">
-<br>
-        <input type="text" name="Nacionalidad" id="Nacionalidad" class="form-control" placeholder="" value="<?php  echo $nacionalidad ?>">
-<br>
-        <INPUT TYPE="text" NAME="Vehiculo" class="form-control"value="<?php  echo $vehiculo ?>">
-<br>
-        <input type ="text" name="TelefonoMovil" class="form-control" placeholder="" value="<?php  echo $num_cel ?>">
-<br>
-        <input type="email" name="email" class="form-control"placeholder="" value="<?php  echo $email ?>">
-<br>
-        <INPUT TYPE="password" NAME="clave"  class="form-control"value="<?php  echo $contraseña ?>">
-<br>
+        <li>
+        <label for="Matrícula">Matrícula<br></label>
+        <input type ="text" name="Matricula" value="<?php echo $matricula?>" required>
+        </li>
+        <li>
+        <label for="Carrera tecnica">Carrera técnica<br></label>
+        <SELECT NAME="CarerraTecnica" required>
+        <OPTION VALUE="Curso" SELECTED>
+        <OPTION VALUE="Artes Aplicadas">Artes Aplicadas
+        <OPTION VALUE="Artes Culinarias">Artes Culinarias
+        <OPTION VALUE="Artes Gráficas">Artes Gráficas
+        <OPTION VALUE="Artes Visuales">Artes Visuales
+        <OPTION VALUE="Informática">Informática
+        </SELECT>
+        </li>
+        <li>
+        <label for="Nombre">Nombre<br></label>
+        <input type ="text" name="Nombre" value="<?php  echo $Nombres ?>" required>
+        </li>
+        <li>
+        <label for="apellidos">Apellidos<br></label>
+        <input type="text" name="apellidos" value="<?php  echo $Apellidos ?>" required >
+        </li>
+        <li>
+        <label for="fecha de nacimiento">Fecha de Nacimiento<br></label>
+        <input type="date" name="fechaNacimiento" value="<?php  echo $fecha_nacimiento ?>" required>
+        </li>
+        <li>
+        <label for="Seccion">Sección<br></label>
+        <input type ="text" name="Seccion" value="<?php  echo $seccion ?>" required>
+        </li>
+        <li>
+        <label for="Provincia">Provincia<br></label>
+        <SELECT NAME="Provincia" required>
+        <OPTION VALUE="Provincia" SELECTED>
+        <OPTION VALUE="Azua">Azua
+        <OPTION VALUE="Bahoruco">Bahoruco
+        <OPTION VALUE="Dajabon">Dajabon
+        <OPTION VALUE="Distrito Nacional">Distrito Nacional
+        <OPTION VALUE="Duarte">Duarte
+        <OPTION VALUE="El seibo">El seibo
+        <OPTION VALUE="Elias Piña">Elías Piña
+        <OPTION VALUE="Espaillat">Espaillat
+        <OPTION VALUE="Hato Mayor">Hato Mayor
+        <OPTION VALUE="Hermanas Mirabal">Hermanas Mirabal
+        <OPTION VALUE="Independencia">Independencia
+        <OPTION VALUE="La Altagracia">La Altagracia
+        <OPTION VALUE="La Romana">La Romana
+        <OPTION VALUE="La vega">La Vega
+        <OPTION VALUE="Maria Trinidad Sanchez">Maria Trinidad Sánchez
+        <OPTION VALUE="Monseñor Nouel">Monseñor Nouel
+        <OPTION VALUE="Monte Cristi">Monte Cristi
+        <OPTION VALUE="Monte Plata">Monte Plata
+        <OPTION VALUE="Pedernales">Pedernales
+        <OPTION VALUE="Peravia">Peravia
+        <OPTION VALUE="Puerto Plata">Puerto Plata
+        <OPTION VALUE="Samana">Samaná
+        <OPTION VALUE="San cristobal">San Cristóbal
+        <OPTION VALUE="San jose de Ocoa">San José  de Ocoa
+        <OPTION VALUE="San juan">San Juan
+        <OPTION VALUE="San Pedro de Macoris">San Pedro de Macorís
+        <OPTION VALUE="Sanchez Ramirez">Sánchez Ramírez
+        <OPTION VALUE="Santiago">Santiago
+        <OPTION VALUE="Santiago Rodriguez">Santiago Rodríguez
+        <OPTION VALUE="Santo Domingo">Santo Domingo
+        <OPTION VALUE="Valverde">Valverde   
+        </SELECT>
+        </li>
+        <label for="Nombre">Teléfono de Residencial<br></label>
+        <input type ="text" name="TelefonoResidencial"  value="<?php  echo $tel_res ?>" required>
+        <li>   
+        <label for="Vivienda">Posee licencia de conducir?<br></label>
+        <INPUT TYPE="radio" NAME="licencia" VALUE="Si">Si
+        <INPUT TYPE="radio" NAME="licencia" VALUE="No">No
 
-<button type="submit" class="btn btn-lg btn-primary"  name="update">Editar</button>
-</form>
+        </li>
+        <li>
+        <label for="Nombre">Cédula de Identidad<br></label>
+        <input type ="text" name="Cedula" value="<?php  echo $cedula ?>" required>
+        </li>
+        <li>
+        <label for="Tbasico">Técnico Básico<br></label>
+        <SELECT NAME="TecnicoBasico">
+        <OPTION VALUE="N/A" SELECTED>N/A
+        </SELECT>
+        </li>
+        <li>
+        <label for="sexo">Sexo<br></label>
+        <SELECT NAME="sexo">
+        <OPTION VALUE="M">Masculino
+        <OPTION VALUE="F">Femenino
+        </SELECT>
+        </li>
+        <li>
+        <label for="sector">Dirección<br></label>
+        <input type="text" name="direccion" value="<?php  echo $direccion ?>" >
+        </li>
+        <li>
+        <label for="sector">Sector<br></label>
+        <input type="text" name="sector" value="<?php  echo $sector ?>" >
+        </li>
+        <li>
+        <label for="Municipio">Municipio<br></label>
+        <input type="text" name="Municipio" value="<?php  echo $municipio ?>">
+        </li>
+        <li>
+        <label for="País">Pais de Nacionalidad<br></label>
+        <SELECT NAME="Nacionalidad">
+        <OPTION VALUE="" SELECTED>
+        <option value="Afganistán">Afganistán</option>
+        <option value="Albania">Albania</option>
+        <option value="Alemania">Alemania</option>
+        <option value="Andorra">Andorra</option>
+        <option value="5">Angola</option>
+        <option value="Angola">Estados unidos</option>
+        <option value="Republica Dominicana">Republica Dominicana</option>
+        <option value="España">España</option>
+        </SELECT>
+        </li>
+        <li>
+        <label for="Vivienda">Posee vehículo propio?<br></label>
+        <input TYPE="radio" NAME="vehiculo" VALUE="Si">Si
+        <input TYPE="radio" NAME="vehiculo" VALUE="No">No
+        </li>
+        <li>
+        <label for="Nombre">Telefono Móvil<br></label>
+        <input type ="text" name="TelefonoMovil" value="<?php echo $num_cel ?>" required>
+        </li>
+        <li>
+        <label for="email">Email<br></label>
+        <input type="email" name="email"  value="<?php echo $email ?>" required>
+        </li>
+        <label for="email">Elíja una Contraseña<br></label>
+        <INPUT TYPE="password" NAME="clave" value="<?php  echo $contraseña ?>" required/>
+        <li>
+        <input type="submit" name="enviar" value="Editar" >
+        </li>
+        </ul>
+    </form>
+    </body>
+</html>

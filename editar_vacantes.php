@@ -29,6 +29,7 @@
 
     $id = $_REQUEST['id_vacante'];
     
+    
         $sql = "SELECT * FROM vacantes WHERE ID_Vacante = $id;";
 
         $result = mysqli_query($mysqli, $sql);

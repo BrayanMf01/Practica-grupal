@@ -21,7 +21,7 @@ function insertar ($conexiones){
     $Nacionalidad=$_POST['Nacionalidad'] ?? null;
     $TelefonoResidencial=$_POST['TelefonoResidencial'] ?? null;
     $TelefonoMovil=$_POST['TelefonoMovil'] ?? null;
-    $Licenciaconducir=$_POST['Licenciaconducir'] ?? null;
+    $Licenciaconducir=$_POST['licencia'] ?? null;
     $Vehiculo=$_POST['vehiculo'] ?? null;
     $email=$_POST['email'] ?? null;
     $clave=$_POST['clave'] ?? null;
@@ -33,7 +33,7 @@ function insertar ($conexiones){
     insertar($conexiones);
     mysqli_close($conexiones);
 
-    header("location: Formulario 1.php?insert=success");
+  header("location: Formulario 1.php?insert=success");
 
 
 ?>

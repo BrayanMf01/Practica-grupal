@@ -39,10 +39,11 @@
             <th>Teléfono</th>
             <th colspan="3">Acción</th>
         </tr>
+        <center>
     <form action="control_vacantes.php" method="post">
-        <input type="text" name="palabra">
+        <input type="text" name="palabra" placeholder="Nombre empresa o puesto">
         <button type="submit">Buscar</button>
-
+        </center>
         <?php 
     
     require ("conexion.php");

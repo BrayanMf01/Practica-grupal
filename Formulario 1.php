@@ -23,7 +23,7 @@
       </ul>
   </nav>
 </header>
-<center><h1>Formulario de registros de Estudiantes</h1></center>
+<center><h1>Formulario para Registros de Estudiantes</h1></center>
 <body>
 <div class="container">
 <FORM  class="row" METHOD="POST" ACTION="almacen.php">
@@ -73,15 +73,15 @@
         </li>
         <li>
         <label for="apellidos">Apellidos<br></label>
-        <input type="text" name="apellidos" id="apellidos" placeholder="Apellido" required />
+        <input type="text" name="apellidos" id="apellidos" required />
         </li>
         <li>
         <label for="fecha de nacimiento">Fecha de Nacimiento<br></label>
-        <input type="date" name="fechaNacimiento" id="fechaN" placeholder="fecha de nacimiento"/>
+        <input type="date" name="fechaNacimiento" id="fechaN">
         </li>
         <li>
         <label for="Seccion">Sección<br></label>
-        <input type ="text" name="Seccion" id="Seccion" placeholder=""/>
+        <input type ="text" name="Seccion" id="Seccion">
         </li>
         <li>
         <label for="Provincia">Provincia<br></label>
@@ -121,14 +121,15 @@
         </SELECT>
         </li>
         <label for="Nombre">Teléfono de Residencial<br></label>
-        <input type ="text" name="TelefonoResidencial"  placeholder=""/>
+        <input type ="text" name="TelefonoResidencial">
         <li>   
         <label for="Vivienda">Posee licencia de conducir?<br></label>
-        <INPUT TYPE="checkbox" NAME="licencia" VALUE="Si pose licencia de conducir">
+        <INPUT TYPE="radio" NAME="licencia" VALUE="Si">Si
+        <INPUT TYPE="radio" NAME="licencia" VALUE="No">No
         </li>
         <li>
         <label for="Nombre">Cédula de Identidad<br></label>
-        <input type ="text" name="Cedula" id="TCedula" placeholder="Ej.: 001-1234567-1"/>
+        <input type ="text" name="Cedula" id="TCedula">
         </li>
         <li>
         <label for="Tbasico">Técnico Básico<br></label>
@@ -166,22 +167,23 @@
         </SELECT>
         </li>
         <li>
-        <label for="Vivienda">Posee vehículo propio?<br></label>
-        <input TYPE="checkbox" NAME="vehiculo" VALUE="Si">
+        <label>Posee vehículo propio?<br></label>
+        <input TYPE="radio" NAME="vehiculo" VALUE="Si">Si
+        <input TYPE="radio" NAME="vehiculo" VALUE="No">No
         </li>
         <li>
-        <label for="Nombre">Telefono Móvil<br></label>
+        <label>Telefono Móvil<br></label>
         <input type ="text" name="TelefonoMovil"  placeholder=""/>
         </li>
         <li>
-        <label for="email">Email<br></label>
+        <label>Email<br></label>
         <input type="email" name="email" placeholder="" required />
         </li>
-        <label for="email">Elíja una Contraseña<br></label>
+        <label>Elíja una Contraseña<br></label>
         <INPUT TYPE="password" NAME="clave" required/>
         <li>
-        <label for="Terminos">Términos y condiciones<br></label>
-        <INPUT TYPE="checkbox" NAME="Condiciones" VALUE="Terminos y condiciones">
+        <label>Términos y Condiciones<br></label>
+        <INPUT TYPE="checkbox" NAME="Condiciones" VALUE="Terminos y condiciones" required>
         </li>
         <li>
         <input type="submit" class="btn btn-primary" name="enviar" value="aceptar" required/>

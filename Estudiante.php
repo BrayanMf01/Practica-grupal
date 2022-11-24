@@ -4,32 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Css/estilos_control_vacantes.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Css/estilos_control_estudiantes.css">
     <title>Registros de los Estudiantes</title>
 </head>
-<header>
-  <img src="https://ipisa.edu.do/wp-content/uploads/2018/08/logo-1.png" alt="logo ipisa">
-  <h1 class="headtxt">Instituto Politécnico Industrial de Santiago</h1>
-  <h3 class="desctxt">Departamento de Vinculación Laboral</h3>
-  <nav class="navegacion">
-      <ul class="menu">
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="pasantia.html">Pasantía</a></li>
-          <li><a href="colaboradores.html">Colaboradores</a></li>
-          <li><a href="familia.html">Familia</a></li>
-          <li><a href="Registros.html">Registros</a></li>
-      </ul>
-  </nav>
-</header>
+
 <body>
+
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <a href="#" class="enlace">
+            <img src="https://ipisa.edu.do/wp-content/uploads/2018/08/logo-1.png" alt="logo ipisa" class="logo">
+        </a>
+        <h1 class="headtxt">Instituto Politécnico Industrial de Santiago</h1>
+        <h3 class="desctxt">Departamento de Vinculación Laboral</h3>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="pasantia.html">Pasantía</a></li>
+            <li><a href="colaboradores.html">Colaboradores</a></li>
+            <li><a href="familia.html">Familia</a></li>
+            <li><a class="active" href="Registros.html">Registros</a></li>
+        </ul>
+    </nav>
+
 <center><h1>Lista de Alumnos</h1>
     <form action="Estudiante.php" method="POST">
     <input type="text" class="form-control" name="par" placeholder="Nombre del estudiante">
     <Button type="Submit" class="btn btn-lg btn-primary" name="Busqueda">Buscar</Button>
      </form>
     </center>
-    <table class="table table-dark table-striped-columns" border="2">
+    <div class="tbl">
+    <table class="table table-dark table-striped-columns" border="1">
 <tr>
+    <thead>
     <th scope="col">ID</th>
     <th scope="col">Año de Graduacion</th>
     <th scope="col">Institución Educativa</th>
@@ -55,6 +65,7 @@
     <th scope="col">E-mail</th>
     <th scope="col">Contraseña</th>
     <th scope="col" colspan="2">Accion</th>
+</thead>
 </tr>
 <?php
 include_once 'Conexion F1.php';
@@ -72,7 +83,7 @@ $total = mysqli_num_rows($data);
 if($total>0){
   while ($row=mysqli_fetch_assoc($data)){
     echo
-    "<tr>
+    "<tr> <tbody>
     <td>". $row['ID_Alumno'] ."</td>
     <td>". $row['año_graduacion'] ."</td>
     <td>". $row['institucion_educativa'] ."</td>
@@ -99,7 +110,7 @@ if($total>0){
     <td>". $row['contraseña'] ."</td>
     <td><a href='delete.php?id=$row[ID_Alumno]'>Borrar</td>
     <td><a href='Update.php?id_alumno=$row[ID_Alumno]'>Editar</td>
-    </tr>";
+    </tbody> </tr> </div>";
 }
 }
 }

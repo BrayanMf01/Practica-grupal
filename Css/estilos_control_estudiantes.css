@@ -71,11 +71,11 @@ li a.active, li a:hover{
 #check{
     display: none;
 }
-section{
-    background: url(fondo.jpg) no-repeat;
-    background-size: cover;
-    background-position: center center;
-    height: calc(100vh - 80px);
+.tbl{
+    margin: auto;
+    width: 90%;
+    height: 350px;
+    overflow: auto;
 }
 @media (max-width: 441px){
 
@@ -173,7 +173,7 @@ section{
     #check:checked ~ ul{
         left:0;
     }
-}
+}/*
 @media(max-width: 1150px){
     table {
 		border:0;
@@ -206,7 +206,7 @@ section{
 	table thead {
 		display: none;
 	}
-}
+}*/
 @media (max-width: 1180px){
     .headtxt{
         font-size: 12px;

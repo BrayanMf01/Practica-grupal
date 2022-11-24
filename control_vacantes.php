@@ -4,29 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="Css/estilos_control_vacantes.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Control de Vacantes</title>
 </head>
-<header>
-  <img src="https://ipisa.edu.do/wp-content/uploads/2018/08/logo-1.png" alt="logo ipisa">
-  <h1 class="headtxt">Instituto Politécnico Industrial de Santiago</h1>
-  <h3 class="desctxt">Departamento de Vinculación Laboral</h3>
-  <nav class="navegacion">
-      <ul class="menu">
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="pasantia.html">Pasantía</a></li>
-          <li><a href="colaboradores.html">Colaboradores</a></li>
-          <li><a href="familia.html">Familia</a></li>
-          <li><a href="Registros.html">Registros</a></li>
-      </ul>
-  </nav>
-</header>
+
 <body>
+
+<nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <a href="#" class="enlace">
+            <img src="https://ipisa.edu.do/wp-content/uploads/2018/08/logo-1.png" alt="logo ipisa" class="logo">
+        </a>
+        <h1 class="headtxt">Instituto Politécnico Industrial de Santiago</h1>
+        <h3 class="desctxt">Departamento de Vinculación Laboral</h3>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="pasantia.html">Pasantía</a></li>
+            <li><a href="colaboradores.html">Colaboradores</a></li>
+            <li><a href="familia.html">Familia</a></li>
+            <li><a class="active" href="Registros.html">Registros</a></li>
+        </ul>
+    </nav>
+
 <h1>Vacantes Existentes</h1>
     <table  border="2">
+        <thead>
         <tr>
-            <th>ID</th>
-            <th>ID Empresa</th>
+
             <th>Nombre Empresa</th>
             <th>Puesto</th>
             <th>Perfil del Puesto</th>
@@ -39,6 +47,7 @@
             <th>Teléfono</th>
             <th colspan="3">Acción</th>
         </tr>
+        </thead>
         <center>
     <form action="control_vacantes.php" method="post">
         <input type="text" name="palabra" placeholder="Nombre empresa o puesto">
@@ -64,9 +73,8 @@ function mostrar($mysqli){
     if($total!=0){
         while($row=mysqli_fetch_assoc($data)){
 
-            echo "<tr> 
-            <td>" . $row['ID_Vacante'] . "</td> 
-            <td>" . $row['ID_Empresa'] . "</td>
+            echo "<tr> <tbody>
+
             <td>" . $row['nombre_empresa'] . "</td>
              <td>" . $row['nombre_puesto'] . "</td> 
              <td>" . $row['perfil_puesto'] . "</td>              
@@ -79,7 +87,7 @@ function mostrar($mysqli){
              <td>" . $row['telefono_contacto'] . "</td> 
              <td> <a href='eliminar_vacantes.php?id=$row[ID_Vacante]'>Borrar</td> 
              <td> <a href='editar_vacantes.php?id_vacante=$row[ID_Vacante]'>Editar</td> 
-                  </tr>";;
+             </tbody>  </tr>";;
 }}
 }
 
@@ -93,8 +101,6 @@ function buscar($mysqli){
         while($row=mysqli_fetch_assoc($data)){
 
             echo "<tr> 
-            <td>" . $row['ID_Vacante'] . "</td> 
-            <td>" . $row['ID_Empresa'] . "</td>
             <td>" . $row['nombre_empresa'] . "</td>
              <td>" . $row['nombre_puesto'] . "</td> 
              <td>" . $row['perfil_puesto'] . "</td>              

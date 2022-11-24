@@ -4,26 +4,31 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="Css/Estilos_estudiantes">
+        <link rel="stylesheet" href="Css/estilos_vacantes.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.24/sweetalert2.all.js"></script>
         
         <title>Actualizar</title>
 </head>
-<header>
-  <img src="https://ipisa.edu.do/wp-content/uploads/2018/08/logo-1.png" alt="logo ipisa">
-  <h1 class="headtxt">Instituto Politécnico Industrial de Santiago</h1>
-  <h3 class="desctxt">Departamento de Vinculación Laboral</h3>
-  <nav class="navegacion">
-      <ul class="menu">
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="pasantia.html">Pasantía</a></li>
-          <li><a href="colaboradores.html">Colaboradores</a></li>
-          <li><a href="familia.html">Familia</a></li>
-          <li><a href="Registros.html">Registros</a></li>
-      </ul>
-  </nav>
-</header>
+
 <body>
+<nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <a href="#" class="enlace">
+            <img src="https://ipisa.edu.do/wp-content/uploads/2018/08/logo-1.png" alt="logo ipisa" class="logo">
+        </a>
+        <h1 class="headtxt">Instituto Politécnico Industrial de Santiago</h1>
+        <h3 class="desctxt">Departamento de Vinculación Laboral</h3>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="pasantia.html">Pasantía</a></li>
+            <li><a href="colaboradores.html">Colaboradores</a></li>
+            <li><a href="familia.html">Familia</a></li>
+            <li><a class="active" href="Registros.html">Registros</a></li>
+        </ul>
+    </nav>
 <center><h1>Editar Información de Estudiantes</h1></center>
 
 <?php
@@ -68,7 +73,7 @@ if($resultCheck > 0){
 <ul>
         <li>
         <label>ID Estudiante<br></label>
-        <input name="id" value="<?php echo $id?>">
+        <input name="id" value="<?php echo $id?>" >
         </li>
         <li>
         <label for="Año de graduacion">Año de graduación<br></label>

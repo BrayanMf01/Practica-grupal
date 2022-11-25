@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="Css/Estilos_estudiantes.css">
-    <link rel="Shortcut icon" type="image/x-icon" href="img/Logo.jpg">
-    <title>Estudiantes</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="Css/estilos_vacantes.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.24/sweetalert2.all.js"></script>
+        
+        <title>Actualizar</title>
 </head>
+
 <body>
 <nav>
         <input type="checkbox" id="check">
@@ -28,19 +29,60 @@
             <li><a class="active" href="Registros.html">Registros</a></li>
         </ul>
     </nav>
+<center><h1>Editar Información de Estudiantes</h1></center>
 
-<center><h1>Formulario para Registros de Estudiantes</h1></center>
-<div class="container">
-<FORM  class="row" METHOD="POST" ACTION="almacen.php">
+<?php
+include_once 'Conexion F1.php';
+$id = $_REQUEST['id_alumno'];
+
+$sql = "SELECT * FROM alumnos where ID_Alumno=$id;";
+
+$result = mysqli_query($conexiones, $sql);
+$resultCheck = mysqli_num_rows($result);
+
+if($resultCheck > 0){
+    $row = mysqli_fetch_assoc($result);
+    $graduacion=$row['año_graduacion'];
+    $institucion_educativa=$row['institucion_educativa']; 
+    $curso=$row['curso'];
+    $matricula=$row['matricula']; 
+    $cedula=$row['cedula'];
+    $carrera_tecnica=$row['carrera_tecnica']; 
+    $tecnico_basico=$row['tecnico_basico'];
+    $Nombres=$row['Nombres'];
+    $Apellidos=$row['Apellidos'];
+    $fecha_nacimiento=$row['fecha_nacimiento'];
+    $sexo=$row['sexo'];
+    $direccion = $row['direccion'];
+    $sector=$row['sector'];
+    $seccion=$row['seccion'];
+    $municipio=$row['municipio'];
+    $provincia=$row['provincia'];
+    $nacionalidad=$row['nacionalidad'];
+    $tel_res=$row['tel_res'];
+    $num_cel=$row['num_cel'];
+    $licencia=$row['licencia'];
+    $vehiculo=$row['vehiculo'];
+    $email=$row['email'];
+    $contraseña=$row['contraseña'];
+}
+?>
+    
+
+    <form method="POST" action="Atualizar.php">
 <ul>
         <li>
+        <label>ID Estudiante<br></label>
+        <input name="id" value="<?php echo $id?>" >
+        </li>
+        <li>
         <label for="Año de graduacion">Año de graduación<br></label>
-        <input type="date" name="graduacion"  class="form-input" placeholder="Año de la graduacion"/>
+        <input type="date" name="graduacion"  value="<?php echo $graduacion?>" required>
         </li>
         <li>
         <label for="Institución educativa a la que pertenece">Institución Educativa  a la que pertenece<br></label>
-        <SELECT NAME="Institucion">
-        <OPTION VALUE="Institutos" SELECTED>
+        <SELECT NAME="Institucion" required>
+        <OPTION VALUE="Institutos">
         <OPTION VALUE="IPISA" >IPISA
         <OPTION VALUE="Don Bosco">Don Bosco
         <OPTION VALUE="Politécnico Las Mercedes">Politécnico Las Mercerdes
@@ -48,8 +90,8 @@
         </li>
         <li>
         <label for="Curso">Curso<br></label>
-        <SELECT NAME="Curso">
-        <OPTION VALUE="Curso" SELECTED>
+        <SELECT NAME="Curso" required>
+        <OPTION VALUE="Curso">
         <OPTION VALUE="1ero" >1ero
         <OPTION VALUE="2do">2do
         <OPTION VALUE="3ero">3ro
@@ -59,11 +101,11 @@
 
         <li>
         <label for="Matrícula">Matrícula<br></label>
-        <input type ="text" name="Matricula" id="Asunto" placeholder=""/>
+        <input type ="text" name="Matricula" value="<?php echo $matricula?>" required>
         </li>
         <li>
         <label for="Carrera tecnica">Carrera técnica<br></label>
-        <SELECT NAME="CarerraTecnica">
+        <SELECT NAME="CarerraTecnica" required>
         <OPTION VALUE="Curso" SELECTED>
         <OPTION VALUE="Artes Aplicadas">Artes Aplicadas
         <OPTION VALUE="Artes Culinarias">Artes Culinarias
@@ -74,23 +116,23 @@
         </li>
         <li>
         <label for="Nombre">Nombre<br></label>
-        <input type ="text" name="Nombre" id="Nombre" placeholder=""/>
+        <input type ="text" name="Nombre" value="<?php  echo $Nombres ?>" required>
         </li>
         <li>
         <label for="apellidos">Apellidos<br></label>
-        <input type="text" name="apellidos" id="apellidos" required />
+        <input type="text" name="apellidos" value="<?php  echo $Apellidos ?>" required >
         </li>
         <li>
         <label for="fecha de nacimiento">Fecha de Nacimiento<br></label>
-        <input type="date" name="fechaNacimiento" id="fechaN">
+        <input type="date" name="fechaNacimiento" value="<?php  echo $fecha_nacimiento ?>" required>
         </li>
         <li>
         <label for="Seccion">Sección<br></label>
-        <input type ="text" name="Seccion" id="Seccion">
+        <input type ="text" name="Seccion" value="<?php  echo $seccion ?>" required>
         </li>
         <li>
         <label for="Provincia">Provincia<br></label>
-        <SELECT NAME="Provincia">
+        <SELECT NAME="Provincia" required>
         <OPTION VALUE="Provincia" SELECTED>
         <OPTION VALUE="Azua">Azua
         <OPTION VALUE="Bahoruco">Bahoruco
@@ -116,7 +158,7 @@
         <OPTION VALUE="Samana">Samaná
         <OPTION VALUE="San cristobal">San Cristóbal
         <OPTION VALUE="San jose de Ocoa">San José  de Ocoa
-        <OPTION VALUE="San juan">San juan
+        <OPTION VALUE="San juan">San Juan
         <OPTION VALUE="San Pedro de Macoris">San Pedro de Macorís
         <OPTION VALUE="Sanchez Ramirez">Sánchez Ramírez
         <OPTION VALUE="Santiago">Santiago
@@ -126,15 +168,16 @@
         </SELECT>
         </li>
         <label for="Nombre">Teléfono de Residencial<br></label>
-        <input type ="text" name="TelefonoResidencial">
+        <input type ="text" name="TelefonoResidencial"  value="<?php  echo $tel_res ?>" required>
         <li>   
         <label for="Vivienda">Posee licencia de conducir?<br></label>
         <INPUT TYPE="radio" NAME="licencia" VALUE="Si">Si
         <INPUT TYPE="radio" NAME="licencia" VALUE="No">No
+
         </li>
         <li>
         <label for="Nombre">Cédula de Identidad<br></label>
-        <input type ="text" name="Cedula" id="TCedula">
+        <input type ="text" name="Cedula" value="<?php  echo $cedula ?>" required>
         </li>
         <li>
         <label for="Tbasico">Técnico Básico<br></label>
@@ -145,17 +188,21 @@
         <li>
         <label for="sexo">Sexo<br></label>
         <SELECT NAME="sexo">
-        <OPTION VALUE="M" SELECTED>Masculino
-        <OPTION VALUE="F" >Femenino
+        <OPTION VALUE="M">Masculino
+        <OPTION VALUE="F">Femenino
         </SELECT>
         </li>
         <li>
+        <label for="sector">Dirección<br></label>
+        <input type="text" name="direccion" value="<?php  echo $direccion ?>" >
+        </li>
+        <li>
         <label for="sector">Sector<br></label>
-        <input type="text" name="sector" id="sector" placeholder="" required />
+        <input type="text" name="sector" value="<?php  echo $sector ?>" >
         </li>
         <li>
         <label for="Municipio">Municipio<br></label>
-        <input type="text" name="Municipio" id="Municipio" placeholder="" required />
+        <input type="text" name="Municipio" value="<?php  echo $municipio ?>">
         </li>
         <li>
         <label for="País">Pais de Nacionalidad<br></label>
@@ -172,33 +219,24 @@
         </SELECT>
         </li>
         <li>
-        <label>Posee vehículo propio?<br></label>
+        <label for="Vivienda">Posee vehículo propio?<br></label>
         <input TYPE="radio" NAME="vehiculo" VALUE="Si">Si
         <input TYPE="radio" NAME="vehiculo" VALUE="No">No
         </li>
         <li>
-        <label>Telefono Móvil<br></label>
-        <input type ="text" name="TelefonoMovil"  placeholder=""/>
+        <label for="Nombre">Telefono Móvil<br></label>
+        <input type ="text" name="TelefonoMovil" value="<?php echo $num_cel ?>" required>
         </li>
         <li>
-        <label>Email<br></label>
-        <input type="email" name="email" placeholder="" required />
+        <label for="email">Email<br></label>
+        <input type="email" name="email"  value="<?php echo $email ?>" required>
         </li>
-        <label>Elíja una Contraseña<br></label>
-        <INPUT TYPE="password" NAME="clave" required/>
+        <label for="email">Elíja una Contraseña<br></label>
+        <INPUT TYPE="password" NAME="clave" value="<?php  echo $contraseña ?>" required/>
         <li>
-        <label>Términos y Condiciones<br></label>
-        <INPUT TYPE="checkbox" NAME="Condiciones" VALUE="Terminos y condiciones" required>
-        </li>
-        <li>
-        <input type="submit" class="btn btn-primary" name="enviar" value="aceptar" required/>
+        <input type="submit" name="enviar" value="Editar" >
         </li>
         </ul>
     </form>
-    <form action="Estudiante.php">
-    <input type="submit" class="btn btn-primary" name="enviar" value="Admin"/>
-    </form>
-
-    </div>
-</body>
+    </body>
 </html>

@@ -36,7 +36,6 @@
 <body>
 <h1>Formulario de Registro de Empresas</h1>
    <form class="row" METHOD="POST" ACTION="guardar.php">
-    <ul>
       <li>
         <label>Nombre de la Empresa:</label>
         <input  type="text" name="nombre">
@@ -60,11 +59,12 @@
         <input type="radio" name="alcance" value="Nacional/Local" CHECKED> Nacional/Local
         <input type="radio" name="alcance" value="Multinacional" CHECKED> Multinacional
       </li>
-      <li>
+      <ul>
         <label> Actividad económica a la que se dedica la empresa</label>
         <textarea name="dedica"></textarea>
-      </li>
+        </ul>
       <li>
+        <li>
         <label>Industria:</label>
         <select name="industria">
             <option value="Agrícola" SELECTED>Agrícola
@@ -78,26 +78,32 @@
 
         </select>
         </li>
+        <li>
         <label>Tamaño empresa:</label>
         <select name="empresa">
             <option value="grande" SELECTED>Grande
             <option value="Mediana" SELECTED>Mediana
             <option value="pequeña" SELECTED>Pequeñas
         </select>
+        </li>
+        <li>
         <label for="Direccion">Direccion</label>
         <input type ="text" name="direccion" id="direccion" placeholder="direccion"/>
-
+        </li>
+<li>
         <label for="Sector">Sector</label>
         <input type ="text" name="sector" id="sector" placeholder="sector"/>
-      
+        </li>
+      <li>
         <label for="Seccion">Seccion</label>
         <input type ="text" name="Seccion" id="Seccion" placeholder="seccion"/>
-
+        </li>
+<li>
         <label for="">Municipio</label>
         <input type ="text" name="Municipio" id="Municipio" placeholder="Municipio"/>
-
+        </li>
       
-
+<li>
         <label for="Provincia">Provincia</label>
         <SELECT NAME="Provincia">
         <OPTION VALUE="Provincia" SELECTED>
@@ -133,8 +139,8 @@
         <OPTION VALUE="Santo Domingo">Santo Domingo
         <OPTION VALUE="Valverde">Valverde   
         </SELECT>
-
-     
+        </li>
+     <li>
         <label for="">Pais de Nacionalidad</label>
         <select name="Nacionalidad">
         <OPTION VALUE="Pais" SELECTED>
@@ -147,23 +153,27 @@
         <option value="Republica Dominicana">Republica Dominicana</option>
         <option value="España">España</option>
         </select>
+        </li>
 
-
-
+<li>
         <label for="Telefono Principal">Telefono Principal</label>
         <input type ="text" name="telefonop" id="Telefonop" placeholder="Telefono principal"/>
-
+        </li>
+<li>
         <label for="Telefono directo">Telefono directo</label>
         <input type ="text" name="telefonod" id="Telefonod" placeholder="Telefono directo"/>
-
+        </li>
+<li>
         <label for="email">Email</label>
         <input type="email" name="email" placeholder="" required />
-
+        </li>
+<li>
         <label>Contraseña:</label>
         <input type="password" name="clave" required>
+        </li>
+        <li>
         <button type="submit">Procesar</button>
-    </ul>
-
+        </li>
     </form> 
     <form action="EMPRESAS.php">
     <button>Editar</button>

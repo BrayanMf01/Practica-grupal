@@ -63,12 +63,9 @@
     <ul>
                 <li>
                     <label>ID Vacante:<br></label>
-                    <input name="ID" value="<?php echo $id?>" disabled>
+                    <input name="ID" value="<?php echo $id?>" readonly>
                 </li>
-                <li>
-                    <label>ID Vacante:<br></label>
-                    <input name="ID" value="<?php echo $id_empresa?>">
-                </li>
+
                 <li>
                     <label>Nombre Empresa:<br></label>
                     <input name="nombre" value="<?php echo $nombre?>">

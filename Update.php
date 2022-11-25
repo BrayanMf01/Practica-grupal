@@ -73,7 +73,7 @@ if($resultCheck > 0){
 <ul>
         <li>
         <label>ID Estudiante<br></label>
-        <input name="id" value="<?php echo $id?>" >
+        <input name="id" value="<?php echo $id?>" readonly >
         </li>
         <li>
         <label for="Año de graduacion">Año de graduación<br></label>

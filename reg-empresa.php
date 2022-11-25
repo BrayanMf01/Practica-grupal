@@ -4,23 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Css/estilos_vacantes.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.24/sweetalert2.all.js"></script>
     <link rel="Shortcut icon" type="image/x-icon" href="img/Logo.jpg">
-    <link rel="stylesheet" href="Css/style.css">
     <title>Registro de Empresa</title>
-</head>
-<header>
-  <img src="https://ipisa.edu.do/wp-content/uploads/2018/08/logo-1.png" alt="logo ipisa">
-  <h1 class="headtxt">Instituto Politécnico Industrial de Santiago</h1>
-  <h3 class="desctxt">Departamento de Vinculación Laboral</h3>
-  <nav class="navegacion">
-      <ul class="menu">
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="pasantia.html">Pasantía</a></li>
-          <li><a href="colaboradores.html">Colaboradores</a></li>
-          <li><a href="familia.html">Familia</a></li>
-          <li><a href="Registros.html">Registros</a></li>
-      </ul>
-  </nav>
+    </head>
+
+<body>
+
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <a href="#" class="enlace">
+            <img src="https://ipisa.edu.do/wp-content/uploads/2018/08/logo-1.png" alt="logo ipisa" class="logo">
+        </a>
+        <h1 class="headtxt">Instituto Politécnico Industrial de Santiago</h1>
+        <h3 class="desctxt">Departamento de Vinculación Laboral</h3>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="pasantia.html">Pasantía</a></li>
+            <li><a href="colaboradores.html">Colaboradores</a></li>
+            <li><a class="active" href="familia.html">Familia</a></li>
+            <li><a href="Registros.html">Registros</a></li>
+        </ul>
+    </nav>
+
 </header>
 <body>
 <h1>Formulario de Registro de Empresas</h1>
@@ -139,10 +150,10 @@
 
 
 
-        <label for="Telefono Principal">telefono Principal</label>
+        <label for="Telefono Principal">Telefono Principal</label>
         <input type ="text" name="telefonop" id="Telefonop" placeholder="Telefono principal"/>
 
-        <label for="Telefono directo">telefono directo</label>
+        <label for="Telefono directo">Telefono directo</label>
         <input type ="text" name="telefonod" id="Telefonod" placeholder="Telefono directo"/>
 
         <label for="email">Email</label>
@@ -150,10 +161,13 @@
 
         <label>Contraseña:</label>
         <input type="password" name="clave" required>
-
-      <button type="submit">Procesar</button>
+        <button type="submit">Procesar</button>
     </ul>
+
     </form> 
+    <form action="EMPRESAS.php">
+    <button>Editar</button>
+    </form>
 
 
 </body>
